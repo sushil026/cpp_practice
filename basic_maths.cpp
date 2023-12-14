@@ -28,10 +28,22 @@ void palindrome( int num ){
         cout<< "false";
     }
 }
+void printDivisors( int x ){
+    int c = 1;
+    while( c<= x/2){
+        if(!(x%c)){
+            cout << c << " ";
+        }
+        c++;
+    }
+    cout << x;
+}
 int main() {
     cout << "Basic maths!"<< endl;
     // countDigits(101);
     // countDigits2(101);
     // palindrome(101);
+    // printDivisors(121);
+    
     return 0;
 }
