@@ -38,12 +38,19 @@ void printDivisors( int x ){
     }
     cout << x;
 }
+void printDivisors2( int n ){
+    for(int i = 1; i <= sqrt(n); i++)
+		if(n % i == 0){
+			cout << i << " ";
+			if(i != n/i) cout << n/i << " ";
+		}
+}
 int main() {
     cout << "Basic maths!"<< endl;
     // countDigits(101);
     // countDigits2(101);
     // palindrome(101);
     // printDivisors(121);
-    
+    // printDivisors2(121);
     return 0;
 }
