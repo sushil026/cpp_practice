@@ -12,19 +12,26 @@ void countDigits2( int num ){
     string str = to_string(num);
     cout << str.size();
 }
-void reverse(int x) {
+int reverse(int x) {
     long long int res = 0;
     while( x){
         res = (res*10)+ x%10;
         x = x/10;
     }
-    cout << int(res);
+    return int(res);
+}
+void palindrome( int num ){
+    int dupli = reverse(num);
+    if( dupli == num ){
+        cout << "true";
+    }else{
+        cout<< "false";
+    }
 }
 int main() {
     cout << "Basic maths!"<< endl;
     // countDigits(101);
     // countDigits2(101);
-    // reverse(1234);
-    
+    // palindrome(101);
     return 0;
 }
