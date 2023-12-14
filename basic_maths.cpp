@@ -46,6 +46,16 @@ void printDivisors2( int n ){
 			if(i != n/i) cout << n/i << " ";
 		}
 }
+void checkIfPrime( int n ){
+    int c = 0;
+    for(int i = 1; i <= sqrt(n); i++)
+		if(n % i == 0){
+			c++;
+			if(i != n/i) c++;
+		}
+	if( c == 2) cout << "true";
+	else cout << "false";
+}
 int main() {
     cout << "Basic maths!"<< endl;
     // countDigits(101);
@@ -53,5 +63,6 @@ int main() {
     // palindrome(101);
     // printDivisors(121);
     // printDivisors2(121);
+	// checkIfPrime(11);
     return 0;
 }
