@@ -8,8 +8,13 @@ void countDigits( int num ){
     }
     cout << c;
 }
+void countDigits2( int num ){
+    string str = to_string(num);
+    cout << str.size();
+}
 int main() {
     cout << "Basic maths!"<< endl;
     // countDigits(101);
+    // countDigits2(101);
     return 0;
 }
