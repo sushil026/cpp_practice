@@ -56,13 +56,25 @@ void checkIfPrime( int n ){
 	if( c == 2) cout << "true";
 	else cout << "false";
 }
+void gcd( int x, int y ){
+    int c = 1;
+    int res;
+    while( c <= min(x,y)){
+        if( x%c==0 && y%c==0){
+            res = c;
+        }
+        c++;
+    }
+    cout << res;
+}
 int main() {
     cout << "Basic maths!"<< endl;
+	// checkIfPrime(11);
     // countDigits(101);
     // countDigits2(101);
     // palindrome(101);
     // printDivisors(121);
     // printDivisors2(121);
-	// checkIfPrime(11);
+	// gcd(12,9);
     return 0;
 }
