@@ -34,6 +34,6 @@ int main() {
     // printCounting(5, 1);
     // printCountingTo1(5);
     // printSum(9, 0);
-    cout << printSum2(9);
+    // cout << printSum2(9);
     return 0;
 }
