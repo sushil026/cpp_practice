@@ -29,11 +29,20 @@ int printSum2(int n){
     }
     return n+printSum2(n-1);
 }
+// PARAMETERISED METHOD
+void factorial(int i, int fac){
+    if( i< 1){
+        cout << fac<< endl;
+        return;
+    }
+    factorial( i-1, fac*i);
+}
 int main() {
     cout << "Basic recursion!"<< endl;
     // printCounting(5, 1);
     // printCountingTo1(5);
     // printSum(9, 0);
     // cout << printSum2(9);
+    factorial(3, 1);
     return 0;
 }
