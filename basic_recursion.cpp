@@ -14,9 +14,26 @@ void printCountingTo1( int x ){
     cout << x<< endl;
     printCounting( x-1);
 }
+// PARAMETERISED METHOD
+void printSum(int i, int sum){
+    if( i< 1){
+        cout << sum<< endl;
+        return;
+    }
+    printSum( i-1, sum+i);
+}
+// FUNCTIONAL METHOD
+int printSum2(int n){
+    if( n == 0){
+        return 0;
+    }
+    return n+printSum2(n-1);
+}
 int main() {
     cout << "Basic recursion!"<< endl;
     // printCounting(5, 1);
     // printCountingTo1(5);
+    // printSum(9, 0);
+    cout << printSum2(9);
     return 0;
 }
