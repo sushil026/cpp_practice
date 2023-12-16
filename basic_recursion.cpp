@@ -44,6 +44,14 @@ int factorial2(int i){
     }
     return i*factorial2( i-1 );
 }
+// DOUBLE POINTER
+void reverseArray( int l, int r, int arr[]) {
+    if( l>=r ){ return; }
+    int t = arr[l];
+    arr[l] = arr[r];
+    arr[r] = t;
+    rev( l+1, r-1, arr);
+}
 int main() {
     cout << "Basic recursion!"<< endl;
     // printCounting(5, 1);
@@ -52,5 +60,8 @@ int main() {
     // cout << printSum2(9);
     // factorial(3, 1);
     // cout << factorial2(3);
+    // int n = 5;
+    // int arr[n] = {1,2,3,4,5};
+    // reverseArray( 0, n-1, arr);
     return 0;
 }
