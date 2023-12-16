@@ -44,15 +44,10 @@ int factorial2(int i){
     }
     return i*factorial2( i-1 );
 }
-void swap( int arr[], int l, int r){
-    int t = arr[l];
-    arr[l] = arr[r];
-    arr[r] = t;
-}
 // DOUBLE POINTER
 void reverseArray( int l, int r, int arr[]) {
     if( l>=r ){ return; }
-    swap( arr, l, r);
+    swap( arr[l], arr[r]);// swap is predefined function in bits/stdc++.h
     rev( l+1, r-1, arr);
 }
 // SINGLE POINTER
@@ -60,7 +55,7 @@ void reverseArray2( int i, int n, int arr[]) {
     if ( i >= n-i-1 ){ return; }
     int l = i;
     int r = n-i-1;
-    swap( arr, l, r);
+    swap( arr[l], arr[r]);
     reverseArray2( i+1, n, arr);
 }
 int main() {
