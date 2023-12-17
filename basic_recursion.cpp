@@ -58,6 +58,13 @@ void reverseArray2( int i, int n, int arr[]) {
     swap( arr[l], arr[r]);
     reverseArray2( i+1, n, arr);
 }
+// MULTIPLE RECURSION CALLS
+int fibonacci( int x ){
+    if( x<= 1){
+        return x;
+    }
+    return fibonacci(x-1)+ fibonacci(x-2);
+}
 int main() {
     cout << "Basic recursion!"<< endl;
     // printCounting(5, 1);
@@ -70,5 +77,6 @@ int main() {
     // int arr[n] = {1,2,3,4,5};
     // reverseArray( 0, n-1, arr);
     // reverseArray2( 0, n, arr);
+    // COUT << fibonacci(4);
     return 0;
 }
